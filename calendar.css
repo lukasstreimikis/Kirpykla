@@ -1,0 +1,129 @@
+
+html, body {
+  background-color: #C1BBBC;
+  height: 100%;
+}
+
+html, body, textarea, input{
+  font-family: arial;
+}
+
+label {
+  color: #black;
+}
+
+a {
+  color: #fff;
+}
+
+span {
+  cursor: default;
+}
+
+span:hover {
+  background-color: #494d53;
+}
+
+table th.text-center, table td.text-center {
+    text-align: center;
+}
+
+.bg-green{
+  background-color: #5f6160;
+}
+
+#header{
+  background-image: url("header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 301px;
+}
+
+#headerText{
+  color: #FFFFFF;
+  text-shadow: 3px 5px 2px #474747;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.forma {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.container{
+  min-width: 100%;
+}
+
+
+#selector{
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#calendar{
+
+  width: 100%;
+  border-collapse: separate;
+    border-spacing: 5px;
+  margin: 10px;
+}
+
+#calendar tr td{
+
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 14.28%;
+  vertical-align: center;
+  text-align: center;
+  height: 60px;
+}
+
+td.blank{
+  background: #ccc;
+}
+tr.day td{
+  background: #5E615F;
+  color: #fff;
+  font-weight: bold;
+  height: 30px !important;
+}
+
+.exist {
+  background-color: #fff;
+  padding: 5px;
+}
+
+.past {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.current {
+  background-color: #CDD4AE;
+  padding: 5px;
+}
+
+
+#event form{
+  margin-top: 10px;
+  padding: 10px;
+}
+#event h1{
+  padding: 0;
+  margin: 0;
+}
+#evt-date{
+  margin: 10px 0;
+  font-weight: bold;
+}
+#event textarea{
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  min-width: 320px;
+  resize: none;
+}
+#event input[type=button], #event input[type=submit]{
+  padding: 10px;
+  font-size: 1.05em;
+}

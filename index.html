@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport">
+
+    <script type="text/javascript">
+    //mobile viewport hack
+    (function(){
+
+      function apply_viewport(){
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)   ) {
+
+          var ww = window.screen.width;
+          var mw = 800; // min width of site
+          var ratio =  ww / mw; //calculate ratio
+          var viewport_meta_tag = document.getElementById('viewport');
+          if( ww < mw){ //smaller than minimum size
+            viewport_meta_tag.setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=no, width=' + mw);
+          }
+          else { //regular size
+            viewport_meta_tag.setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+          }
+        }
+      }
+
+      //ok, i need to update viewport scale if screen dimentions changed
+      window.addEventListener('resize', function(){
+        apply_viewport();
+      });
+
+      apply_viewport();
+
+    }());
+    </script>
+    <title>Kirpykla</title>
+    <link href="calendar.css" rel="stylesheet">
+    <script src="calendar.js"></script>
+    <script src="loadJson.js"></script>
+    <script src="kirpeja.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  </head>
+  <body>
+
+<div class="container p-0 m-0" style="min-height: 100%; background-color: #C1BBBC; ">
+  <div class="row p-0 m-0">
+
+        <div class="d-none d-lg-block col col-1 p-0 m-0">
+        </div>
+
+        <div class="col col-lg-10 col-12 p-0" style="min-width: 710px">
+
+          <div class="page-header mx-2" id="header" style="background-color: #fff; padding: 50px 0px; margin-bottom: 0px;">
+            <h1 class="ml-3" id="headerText">KIRPYKLA</h1>
+          </div>
+
+          <ul class="nav rounded-bottom mx-2 bg-dark">
+            <li class="nav-item">
+              <span class="nav-link text-light rounded" onclick="cal.createPage()"><b>Klientams</b></span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link text-light rounded" onclick="kirpeja.patvirtinti()" ><b>Kirpėjai</b></span>
+            </li>
+          </ul>
+
+          <!-- Puslapis -->
+
+          <div id="page" class="mx-2"> </div>
+
+
+        </div>
+
+        <div class="d-none d-lg-block col col-1 p-0 m-0">
+        </div>
+
+
+  </div>
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+  </body>
+</html>
