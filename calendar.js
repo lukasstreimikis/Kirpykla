@@ -315,17 +315,19 @@ var cal = {
           }
           else
           {
-            if(uzimtiLaikai.length > 51)
-            {
-              cCell.appendChild(neraVietu);
-            }
-            else
-            {
+            
               if(squares[i] > cal.currentDay-1 || cal.sMth > cal.currentMth)
               {
+              	if(uzimtiLaikai.length > 51)
+	            {
+	              cCell.appendChild(neraVietu);
+	            }
+	            else
+	            {
                   cCell.appendChild(button);
+              	}
               }
-            }
+            
           }
         }
         else{
