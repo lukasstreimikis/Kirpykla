@@ -1,5 +1,5 @@
-# kirpykla
-kirpykla
+# Kirpykla
+Kirpykla
 
 Live:
 http://kirpykla.mygidas.lt/
@@ -10,3 +10,5 @@ readme.txt
 Slaptažodis:
 "admin"
 Mažosiomis raidėmis!
+
+Sukurta "NFQ" akademijai.
